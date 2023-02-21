@@ -14,5 +14,10 @@ for element in lista:
         print(f"Teraz lista wewnętrzna - {element}")
         for inny in element:
             print(f"Litera wewnetrzna to {chr(inny)}")
+            elif isinstance(element, str):
+            print(f"Teraz lista wewnętrzna - {element}")
+            for inny in element:
+                print(f"Litera wewnetrzna ma kod {ord(inny)}")
     else:
         print("Sorry")
+
