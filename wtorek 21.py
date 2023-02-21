@@ -6,7 +6,6 @@ print(f"My age is {my_age}")
 if my_age >= 18:
     print("You are adult")
     print("hkgkgkghh")
-else:
     print("You are young")
 elif my_age < 0:
     print("Not born yet")
