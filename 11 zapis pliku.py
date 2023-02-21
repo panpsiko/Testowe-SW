@@ -6,3 +6,6 @@ klasa = [
 
 for preson in klasa:
     print(f"{preson=}")
+
+for person_2, year in klasa:
+    print(f"{person_2=} ->> {year}")
