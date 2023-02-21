@@ -10,5 +10,6 @@ for letter in alphabet:
     # print(letter, end=" /")
     print(f"Letter is {letter}", end="/")
 
-
+for letter in enumerate(alphabet):
+    print(f"Letter is {letter}")
 
