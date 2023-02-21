@@ -5,7 +5,7 @@ while True:
 
     new_color = (input("Ile chcesz dodać kolorów: "))
 
-    if new_color == "KONIEC":
+    if new_color.upper( ) == "KONIEC":
         break
     colors.append(new_color)
 
