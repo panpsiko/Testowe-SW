@@ -13,3 +13,10 @@ for letter in alphabet:
 for letter in enumerate(alphabet):
     print(f"Letter is {letter}")
 
+    print("----------------------")
+    for position, letter in enumerate(alphabet):
+        print(f"Letter is {letter}, {position=}")
+        if position == 7:
+            print("Siódemka!!!")
+
+
