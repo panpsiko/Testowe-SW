@@ -3,3 +3,8 @@
 for value in range(5):
     print(f"Zmienna sterująca = {value}")
     print(f"Zmienna sterująca = {value=}")
+
+print("--------------------------")       # nie róbcie tego na produkcji
+
+for value in range(5):
+    print(f"Zmienna sterująca = {value=}")
