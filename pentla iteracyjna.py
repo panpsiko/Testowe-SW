@@ -10,5 +10,9 @@ for element in lista:
     print(f"Litera to {chr(element)}")
     if isinstance(element, int):
         print(f"Litera to {chr(element)}")
+    elif isinstance(element, list):
+        print(f"Teraz lista wewnętrzna - {element}")
+        for inny in element:
+            print(f"Litera wewnetrzna to {chr(inny)}")
     else:
         print("Sorry")
