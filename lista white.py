@@ -1,4 +1,4 @@
-colors = [ ]
+colors = []
 
 # teraz user podaje własne kolory - pętla nieskończoności
 while True:
