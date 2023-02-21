@@ -12,4 +12,3 @@ elif my_age < 0:
     print("Not born yet")
 else:
     print("You are young")
-
