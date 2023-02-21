@@ -1,0 +1,16 @@
+current_year = 2023
+my_bitrthday = input("Podaj rok urodzenia")
+print(f"{id(my_bitrthday)=}")
+my_bitrthday = print(my_bitrthday)
+my_age = current_year - my_bitrthday
+
+print(f"My age is {my_age}")
+
+if my_age >= 18:
+    print("You are adult")
+    print("hkgkgkghh")
+    print("You are young")
+elif my_age < 0:
+    print("Not born yet")
+else:
+    print("You are young")
