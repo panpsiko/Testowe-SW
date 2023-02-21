@@ -6,5 +6,8 @@ for value in range(5):
 
 print("--------------------------")       # nie róbcie tego na produkcji
 
-for value in range(5):
+for value in range(1, 5):
     print(f"Zmienna sterująca = {value=}")
+
+    for value in range(1, 15, 3):
+        print(f"Zmienna sterująca = {value=}")
