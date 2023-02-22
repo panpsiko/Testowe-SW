@@ -18,6 +18,7 @@ nowy_dokument.add_paragraph(tekst)
 nowy_dokument.add_code("from snakemd import *", lang="python")
 nowy_dokument.output_page()
 
-command = ["pandoc", "-o", plik+".docx", plik]
+command = ["pandoc", "-o", f"{plik}.docx", f"{plik}.md"]
 ret_code = subprocess.run(command, capture_output=True)
+print(ret_code)
 
