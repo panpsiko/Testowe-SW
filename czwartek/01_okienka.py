@@ -1,3 +1,4 @@
-import PySimpleGui as sg
+# https://www.pysimplegui.org/en/latest/
+import PySimpleGUI as sg
 
-sg.popup("Hej - witamy w zespole w projekcie Progr@muj w zespole!", title="Progr@muj w zespole")
+sg.popup("Hej - witamy na szkoleniu w Comarch", title="Python - COMARCH")
