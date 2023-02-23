@@ -41,7 +41,7 @@ def generuj_dokument(code, start_date, end_date=TODAY_ISO):
     nowy_dokument = snakemd.new_doc(plik)
     #
     nowy_dokument.add_header(tytul_wykresu)
-    nowy_dokument.add_element(snakemd.Paragraph([snakemd.InlineText("Wykres", url=wykres_md, image=True)]))
+    nowy_dokument.add_element(snakemd.Paragraph([snakemd.InlineText("", url=wykres_md, image=True)]))
     try:
         nowy_dokument.output_page()
     except Exception as e:
@@ -66,7 +66,15 @@ def test_internetu():
         sg.Popup(f"Łączność do {NBP_URL} - code: {status_nbp}")
 
 def tworz_docx(plik_md):
-    pass
+    os.chdir(TEMP_DIR+"/")
+    command = ["pandoc", "-o", f"{plik_md}.docx", f"{plik_md}.md"]
+    try:
+        efekt = subprocess.run(command, capture_output=True)
+        print(efekt)
+        return True
+    except:
+        sg.popup_error("Zainstaluj pandoc - pewnie go nie masz....")
+        return False
 
 # Start aplikacji
 init_dir()
@@ -94,6 +102,10 @@ while True:
         # https://docs.python.org/3/library/datetime.html#examples-of-usage-timedelta
         data_poczatkowa = TODAY - timedelta(int(values[1]))
         plik = generuj_dokument(waluta, data_poczatkowa.isoformat())
+        if tworz_docx(f"{plik}"):
+            sg.Popup(f"Plik {plik}.md przetworzony na DOCX")
+        else:
+            sg.popup_error("Błąd")
 
     if event == "TEST INTERNETU":
         test_internetu()
