@@ -1,0 +1,4 @@
+
+requests==2.28.2
+SnakeMD==0.12.1
+
