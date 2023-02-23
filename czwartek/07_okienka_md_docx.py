@@ -65,9 +65,9 @@ def test_internetu():
     else:
         sg.Popup(f"Łączność do {NBP_URL} - code: {status_nbp}")
 
-def tworz_docx(plik_md):
+def tworz_docx(token_plik):
     os.chdir(TEMP_DIR+"/")
-    command = ["pandoc", "-o", f"{plik_md}.docx", f"{plik_md}.md"]
+    command = ["pandoc", "-o", f"{token_plik}.docx", f"{token_plik}.md"]
     try:
         efekt = subprocess.run(command, capture_output=True)
         print(efekt)
@@ -87,7 +87,7 @@ app_layout = [
     [sg.Text("Ile dni wstecz wykres (max. 90)?"), sg.Input("")],
     [sg.Button("GENERUJ"),sg.Button("TEST INTERNETU"), sg.Button("KONIEC") ],
 ]
-window = sg.Window("Tutuł naszego okienka aplikacji", app_layout)
+window = sg.Window("GEN kursy walut i zapis do DOCX", app_layout)
 # używamy pętli nieskończonej, która działa aż do słowa kluczowego `break`
 # pamiętajmy o PEP-8, wcięciach i bloku kodu - https://www.python.org/dev/peps/pep-0008/#indentation
 while True:
