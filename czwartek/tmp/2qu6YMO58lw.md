@@ -1,1 +1,0 @@
-# Wykres waluty EUR z dat od 2023-01-29 do 2023-02-23
