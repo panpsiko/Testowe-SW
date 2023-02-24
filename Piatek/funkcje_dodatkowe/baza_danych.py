@@ -32,7 +32,7 @@ def check_mail(db, mail, token):
         cursor = connection.cursor()
         result = cursor.execute(f"SELECT * FROM {table} WHERE token=?", (token,) )
         rekordy = result.fetchall()
-        print("--->>", len(rekordy), rekordy)
+        # print("--->>", len(rekordy), rekordy)
         if len(rekordy) != 1:
             connection.close()
             return False

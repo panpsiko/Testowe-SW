@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <!-- META tags -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="content-language" content="PL">
+    <!-- mobile ready -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Minimal page with bootstrap - i nasze dane</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container">
+    <h1>ADAM - This is our HTML Page with bootstrap</h1>
+</div>
+<hr>
+
+<div class="container">
+    <!--- Komentarz --->
+    <h2>Aktualny czas : {{ czas }} </h2>
+</div>
+<hr>
+
+
+<div class="container">
+    <!--- Komentarz --->
+    <h2>Zmienna request zawiera m. in.: </h2>
+    <ul>
+        <li>Headers: {{ headers }}</li>
+        <li>Remote address: {{ address }}</li>
+        <hr>
+        <li>Email value: {{ user_value }}</li>
+        <hr>
+        <li>Message: {{ user_message }}</li>
+    </ul>
+</div>
+<hr>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
