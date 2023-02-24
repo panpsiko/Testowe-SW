@@ -31,11 +31,13 @@ def check_mail(db, mail, token):
         connection = connect(db)
         cursor = connection.cursor()
         result = cursor.execute(f"SELECT * FROM {table} WHERE token=?", (token,) )
-        if len(result.fetchall()) != 1:
+        rekordy = result.fetchall()
+        print("--->>", len(rekordy), rekordy)
+        if len(rekordy) != 1:
             connection.close()
             return False
 
-        _, db_mail, db_token = result.fetchall()[0]
+        _, db_mail, db_token = rekordy[0]
         if db_mail == mail and db_token == token:
             ret = True
         else:
